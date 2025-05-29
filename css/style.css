@@ -1,0 +1,73 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 100px; /* Ajuste este valor para a altura do seu menu */
+}
+
+/* Ou alternativa para navegadores mais antigos */
+section[id] {
+    scroll-margin-top: 100px; /* Mesmo valor que o scroll-padding-top */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer>p {
+    text-align: center;
+}
+
+.principal {
+    padding: 3rem;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #111111;
+    font-weight: 100;
+}
+
+.carousel-section {
+    margin-bottom: 3rem;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    text-align: justify;
+}
+
+
+@media (max-width: 768px) {
+    /* Ajuste fino do scroll-padding para mobile */
+    html {
+        scroll-padding-top: 150px; /* Igual à altura do menu-container no mobile */
+    }
+    
+    /* Ou use esta alternativa para navegadores mais antigos */
+    section[id] {
+        scroll-margin-top: 150px; /* Igual à altura do menu-container no mobile */
+    }
+
+}

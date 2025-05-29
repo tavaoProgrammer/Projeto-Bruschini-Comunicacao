@@ -1,0 +1,259 @@
+/* Estilos dos carrosséis */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-slide:not(.active) {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Carrossel de largura total */
+.full-width-carousel {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+}
+
+.full-width-carousel .carousel-container {
+    width: 100%;
+}
+
+.full-width-carousel .carousel-slide img {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    max-height: 80vh;
+    object-fit: cover;
+    display: block;
+}
+
+/* Carrossel de avaliações */
+.testimonials-carousel {
+    max-width: 800px;
+}
+
+.testimonial {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial>p {
+    text-align: center;
+}
+
+.client-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #2c3e50;
+}
+
+.client-name {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.client-rating {
+    color: #f1c40f;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.client-review {
+    font-style: italic;
+    color: #555;
+}
+
+/* Carrossel de links - ESTILOS ATUALIZADOS */
+.links-carousel .carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.links-carousel .link-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.links-carousel .link-item {
+    flex: 0 0 100%;
+    min-width: 0;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #2c3e50;
+    transition: transform 0.3s ease;
+}
+
+.links-carousel .link-item:hover {
+    transform: translateY(-5px);
+}
+
+.links-carousel .link-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+/* Desktop - 3 itens visíveis */
+@media (min-width: 769px) {
+    .links-carousel .link-item {
+        flex: 0 0 calc(33.333% - 1rem);
+    }
+}
+
+/* Botões do carrossel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #00000036;
+    color: #00000083;
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 15px;
+    width: 60px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #0000007a;
+}
+
+.prev-btn {
+    left: 1rem;
+}
+
+.next-btn {
+    right: 1rem;
+}
+
+/* Posicionamento dos botões */
+.carousel-btn {
+    top: calc(50% - 50px); /* Ajuste fino para centralizar verticalmente */
+    transform: none;
+}
+
+
+
+.full-width-carousel .prev-btn {
+    left: 2%;
+}
+
+.full-width-carousel .next-btn {
+    right: 2%;
+}
+
+/* Container dos botões para limitar sua área */
+.full-width-carousel .carousel-container {
+    position: relative;
+    height: 100%;
+}
+
+/* Pontos indicadores */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 0.5rem;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #9c9c9c;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: #353535;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-btn {
+        display: none;
+    }
+    
+    .carousel {
+        touch-action: pan-y;
+    }
+    
+    /* Ajustes específicos para o carrossel de links no mobile */
+    .links-carousel .link-slides {
+        width: 100%;
+    }
+    
+    .links-carousel .link-item {
+        flex: 0 0 100%;
+        padding: 0 1rem;
+    }
+}
+
+/* Melhorias de acessibilidade */
+.carousel-btn:focus,
+.carousel-dot:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* Efeito de loading para imagens */
+.carousel-slide img {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Remove efeito de loading quando a imagem é carregada */
+.carousel-slide img[src] {
+    animation: none;
+    background: none;
+}

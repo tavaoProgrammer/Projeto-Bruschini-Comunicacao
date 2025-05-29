@@ -1,0 +1,38 @@
+.sobre_nos {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-bottom: 5em; 
+    align-items: end;
+    justify-content: space-around;
+}
+
+
+#cta_phrase, #wb_button{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#cta_phrase {
+    margin-bottom: 1em;
+}
+
+#wb_button {
+    width: 300px;
+    height: 100px;
+    background-color: #25D366;
+    border: none;
+    border-radius: 300px;
+    color: #FFFFFF;
+
+}
+
+@media only screen and (max-width:1200px) {
+    .sobre_nos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

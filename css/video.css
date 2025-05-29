@@ -1,0 +1,12 @@
+.video-container {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
