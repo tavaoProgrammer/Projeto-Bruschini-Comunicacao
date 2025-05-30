@@ -30,6 +30,12 @@ iframe {
     margin: 5vw;
 }
 
+#contato_direito a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 #wb_number{
     font-family: "Open Sans", sans-serif;
     margin-left: 8px;

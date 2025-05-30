@@ -135,18 +135,17 @@
 /* Botões do carrossel */
 .carousel-btn {
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
-    background-color: #00000036;
-    color: #00000083;
+    background-color: #00000000;
+    color: #000000be;
     border: none;
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 3rem;
     cursor: pointer;
     z-index: 10;
-    border-radius: 15px;
-    width: 60px;
-    height: 100px;
+    width: 80px;
+    height: 89%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,20 +153,20 @@
 }
 
 .carousel-btn:hover {
-    background-color: #0000007a;
+    background-color: #00000010;
 }
 
 .prev-btn {
-    left: 1rem;
+    left: 0rem;
 }
 
 .next-btn {
-    right: 1rem;
+    right: 0rem;
 }
 
 /* Posicionamento dos botões */
 .carousel-btn {
-    top: calc(50% - 50px); /* Ajuste fino para centralizar verticalmente */
+    top: calc(0% - 2px); /* Ajuste fino para centralizar verticalmente */
     transform: none;
 }
 
