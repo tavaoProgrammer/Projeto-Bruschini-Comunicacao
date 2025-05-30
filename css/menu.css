@@ -5,22 +5,23 @@
     left: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to bottom, 
-        rgba(0, 0, 0, 0.95) 0%, 
-        rgba(0, 0, 0, 0.8) 100%);
-    color: white;
+    background: linear-gradient(to bottom,
+        #000000 0%,
+        #000000b6 50%,
+        #0000008e 100%
+    );
+    color: #f1f1f1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 100px;
     z-index: 1000;
-    backdrop-filter: blur(5px);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 /* Logo */
 .logo {
-    height: 50px;
+    height: 80px;
     display: flex;
     align-items: center;
     cursor: default;
@@ -47,11 +48,10 @@
 .menu-list a {
     color: white;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 25px;
     transition: color 0.3s;
     position: relative;
     text-transform: uppercase;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     padding: 5px 0; /* Espaçamento extra para legibilidade */
 }
 
@@ -91,29 +91,32 @@
     transition: all 0.3s;
 }
 
+
+@media (min-width: 769px){
+    .menu-container{
+            backdrop-filter: blur(10px);
+    }
+}
+
 /* Estilos para mobile */
 @media (max-width: 768px) {
     
     
     .menu-container {
-        background: linear-gradient(to bottom, 
-            rgba(0, 0, 0, 0.95) 0%, 
-            rgba(0, 0, 0, 0.85) 30%,
-            rgba(0, 0, 0, 0.7) 100%);
-        backdrop-filter: blur(10px);
-        height: 65px;
+        height: 60px;
         padding: 15px 20px;
+        background: #000000;
     }
     
     .menu-list {
         position: fixed;
-        top: 65px;
+        top: 60px;
         left: 0;
         width: 100%;
         background: linear-gradient(to bottom, 
-            rgba(0, 0, 0, 0.9) 0%, 
-            rgba(0, 0, 0, 0.7) 70%, 
-            rgba(0, 0, 0, 0.5) 100%);
+            #000000 0%, 
+            #000000b0 70%, 
+            #00000057 100%);
         backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
@@ -126,7 +129,6 @@
 
     .menu-list.active {
         transform: translateY(0);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     }
 
     .menu-list li {
@@ -150,7 +152,7 @@
     }
     
     .logo {
-        height: 40px;
+        height: 50px;
     }
     
     .logo img {
@@ -160,7 +162,7 @@
 
 @media (max-width: 480px) {
     .logo {
-        height: 35px;
+        height: 50px;
     }
     
     .logo img {
