@@ -17,3 +17,22 @@
     width: 350px;
     height: 350px;
 }
+
+@media (max-width: 360px) {
+    .linha_img{
+        flex-direction: column;
+    }
+
+    .servico_img{
+        width: 280px;
+        height: 280px;
+    }
+
+}
+
+@media (max-width: 760px) {
+    .linha_img{
+        flex-direction: column;
+    }
+
+}
