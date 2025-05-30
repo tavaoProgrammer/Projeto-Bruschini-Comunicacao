@@ -1,10 +1,16 @@
 .sobre_nos {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 80px;
     margin-bottom: 5em; 
     align-items: end;
     justify-content: space-around;
+}
+
+#servico_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -26,7 +32,12 @@
     border: none;
     border-radius: 300px;
     color: #FFFFFF;
+    transition: all 0.3s ease;
+}
 
+#wb_button:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
 }
 
 @media only screen and (max-width:1200px) {

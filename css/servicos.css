@@ -2,36 +2,24 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-around;
 }
 
 .linha_img {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 50px;
     margin-bottom: 50px;
 }
 
 .servico_img {
-    width: 350px;
-    height: 350px;
+    width: 280px;
+    height: 280px;
     border-radius: 40px;
 }
 
-@media (max-width: 360px) {
-    .linha_img{
-        flex-direction: column;
-    }
-
-    .servico_img{
-        width: 280px;
-        height: 280px;
-    }
-
-}
-
-@media (max-width: 760px) {
+@media (max-width: 950px) {
     .linha_img{
         flex-direction: column;
     }
